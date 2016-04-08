@@ -1,0 +1,52 @@
+@import "../../theme/variables.scss";
+
+.home {
+  padding: 0 40px;
+  width: 996px;
+  margin: 0 auto;
+  background: white url('./background.png') repeat-y center right;
+
+  h2 {
+    font-weight: 800;
+    color: #2c3e50;
+  }
+
+  legend {
+    font-weight: 400;
+    font-size: 10px;
+    color: #b0b8bc;
+    border-bottom: 1px solid #dbe0e2;
+  }
+
+  label {
+    font-weight: 400;
+    color: #2c3e50;
+  }
+
+  .leftColumn {
+    width: 50%;
+    padding-right: 40px;
+    float: left;
+  }
+
+  .rightColumn {
+    width: 50%;
+    float: left;
+  }
+
+  .formGroup {
+    width: 50%;
+    float: left;
+
+    &:nth-child(even) {
+      padding-right: 10px;
+    }
+    &:nth-child(odd) {
+      padding-left: 10px;
+    }
+  }
+
+  .clearfix {
+    clear: both
+  }
+}
