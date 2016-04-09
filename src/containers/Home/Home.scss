@@ -1,52 +1,187 @@
 @import "../../theme/variables.scss";
 
 .home {
-  padding: 0 40px;
-  width: 996px;
+  width: 1000px;
   margin: 0 auto;
-  background: white url('./background.png') repeat-y center right;
+  background: url('./background.png') repeat-y center right;
+
+  @media (max-width: $desktop) {
+    background-image: none;
+    width: 100%;
+  }
 
   h2 {
     font-weight: 800;
-    color: #2c3e50;
+    color: $brand-primary;
+    margin-bottom: 0;
+  }
+
+  form {
+    margin-top: 27px;
+  }
+
+  fieldset:last-child {
+    margin-top: 18px;
   }
 
   legend {
     font-weight: 400;
     font-size: 10px;
     color: #b0b8bc;
-    border-bottom: 1px solid #dbe0e2;
+    border-bottom: 1px solid $brand-secondary;
+    line-height: 1.5;
+    margin-bottom: 21px;
   }
 
   label {
     font-weight: 400;
-    color: #2c3e50;
+    color: $brand-primary;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  input {
+    border-color: #c3c4c3;
+    box-shadow: none;
+    height: 35px;
+    &:focus {
+      border-color: $brand-primary;
+      box-shadow: none;
+    }
+  }
+
+  .buttons {
+    margin-top: 17px;
+    text-align: center;
+
+    & > button {
+      width: 190px;
+      color: white;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 300;
+
+      &:focus {
+        outline: invert none medium;
+      }
+    }
+    .blue {
+      border-bottom: 2px solid #3f515d;
+      background-color: #627b8b;
+      margin-right: 10px;
+      @media (max-width: 490px) {
+        margin-right: 0;
+      }
+    }
+    .grey {
+      border-bottom: 2px solid #2980b9;
+      background-color: #3498db;
+      margin-left: 10px;
+      @media (max-width: 490px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .button {
+
   }
 
   .leftColumn {
-    width: 50%;
-    padding-right: 40px;
+    padding: 20px 40px;
+    width: 480px;
     float: left;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+      float: none;
+    }
   }
 
   .rightColumn {
-    width: 50%;
+    padding: 110px 45px 20px;
+    width: 520px;
     float: left;
+
+    @media (max-width: $desktop) {
+      width: 100%;
+      float: none;
+      background-color: #e1e4e7;
+    }
+
+    h3 {
+      text-align: right;
+      font-size: 16px;
+      font-weight: 400;
+      color: #95a5a6;
+      margin-top: 0;
+    }
+
+    :global(.vcard) {
+      background-color: white;
+      border-bottom: 2px solid #9a9a9a;
+    }
+
+    .body {
+      padding: 20px 25px;
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        border-bottom: 1px solid $brand-secondary;
+      }
+
+      td, th {
+        padding-top: 15px;
+        padding-bottom: 2px;
+        vertical-align: bottom;
+      }
+
+      th {
+        font-size: 10px;
+        color: #34495e;
+      }
+
+      td {
+        font-size: 16px;
+        color: black;
+      }
+    }
   }
 
-  .formGroup {
-    width: 50%;
-    float: left;
+  .header {
+    background-color: $brand-primary;
+    height: 100px;
+    padding: 50px 0 0 25px;
+    position: relative;
 
-    &:nth-child(even) {
-      padding-right: 10px;
+    :global(.n) {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
     }
-    &:nth-child(odd) {
-      padding-left: 10px;
+
+    .avatarPlaceholder {
+      width: 85px;
+      height: 106px;
+      background: url('./avatar-placeholder.png') no-repeat;
+      position: absolute;
+      top: 10px;
+      right: 14px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 
   .clearfix {
     clear: both
   }
+
 }

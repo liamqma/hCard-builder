@@ -1,0 +1,12 @@
+.formGroup {
+  width: 50%;
+  float: left;
+  margin-bottom: 13px;
+
+  &:nth-child(even) {
+    padding-right: 10px;
+  }
+  &:nth-child(odd) {
+    padding-left: 10px;
+  }
+}
