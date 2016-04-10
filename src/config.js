@@ -20,6 +20,7 @@ module.exports = Object.assign({
       titleTemplate: 'hCard Builder: %s',
       meta: [
         {charset: 'utf-8'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'},
         {property: 'og:site_name', content: 'hCard Builder'},
         {property: 'og:locale', content: 'en_US'}
       ],
