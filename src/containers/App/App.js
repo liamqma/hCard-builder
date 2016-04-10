@@ -1,22 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { logout } from 'redux/modules/auth';
-import { routeActions } from 'react-router-redux';
 import config from '../../config';
 
-@connect(
-  state => ({user: state.auth.user}),
-  {logout, pushState: routeActions.push})
+@connect(state => state)
 export default class App extends Component {
   static propTypes = {
-    children: PropTypes.object.isRequired,
-    logout: PropTypes.func.isRequired,
-    pushState: PropTypes.func.isRequired
-  };
-
-  static contextTypes = {
-    store: PropTypes.object.isRequired
+    children: PropTypes.object.isRequired
   };
 
   render() {
